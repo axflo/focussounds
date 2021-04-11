@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Focus Sounds</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Michroma">
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-transparent navbar-fixed-top" role="navigation">
+	  <div class="container-fluid">
+
+	    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+
+			      <a class="navbar-brand" href="#">
+			        <img id="facegif" src="face.gif"></a>
+			    </div>
+
+		      <div class="nav navbar-right">
+		          <a href="#" class="dropdown" data-toggle="dropdown">?</a>
+		          <ul class="dropdown-menu" role="menu">
+		            <li>
+		              <p>A set of music and sounds to help you focus while you work from home.</p>
+		            </li>
+		            <li class="divider"></li>
+		            <li>
+		              <p>Made by Axel during Hackdays at <a href="https://www.shopify.com/">Shopify</a>.</p>
+		            </li>
+		            <li>
+		              <p>Sounds used: <a href="https://freesound.org/people/FlatHill/sounds/237729/">rain</a>, <a href="https://freesound.org/people/WingsOfIrony/sounds/326967/">discussions</a>, <a href="https://freesound.org/people/bpayri/sounds/244945/">airport.</a></p>
+		            </li>
+		          </ul>
+		      </div>
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<div id="wrapper">
+	  <h1>Focus sounds generator</h1>
+	</div>
+
+	<div class="k7tape">
+	  <div class="row">
+	    <div class="col-sm-12 col-md-12">
+	      <div class="mainaction">
+	        <div class="cassette">
+	          <img src="cassette.png" alt="cassette">
+	        </div>
+	        <div class="knobs">
+	          <p id="play"><a onClick="playSoundtrack()" href="#" class="btn btn-primary knob" role="button">PLAY</a></p>
+	          <p id="pause"><a onClick="pauseSoundtrack()" href="#" class="btn btn-primary knob" role="button">PAUSE</a></p>
+	          <p id="stop"><a onClick="stopSoundtrack()" href="#" class="btn btn-primary knob" role="button">STOP</a></p>
+	        </div>
+	        <audio id="soundtrack25m">
+	        <source src="soundtrackfocus.mp3" type="audio/mpeg">
+	        </audio>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="audio-controls">
+		<div class="section-title">
+			<h3>Backgrounds</h3>
+		</div>
+			<div class="centered">
+				<div class="sound discussions" onclick="playBgSound('discussions', 'discussions-speaker')">
+					<img id="discussions-speaker" src="speakeroff.png">
+					<p>discussions</p>
+					<audio id="discussions" loop>
+					<source src="discussions.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<div class="sound rain" onclick="playBgSound('rain', 'rain-speaker')">
+					<img id="rain-speaker" src="speakeroff.png">
+					<p>rain</p>
+					<audio id="rain" loop>
+					<source src="rain.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<div class="sound airport" onclick="playBgSound('airport', 'airport-speaker')">
+					<img id="airport-speaker" src="speakeroff.png">
+					<p>airport</p>
+					<audio id="airport" loop>
+					<source src="airport.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+	</div>
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="scripts/focus.js"></script>
+</body>
+</html>
